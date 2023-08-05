@@ -10,29 +10,29 @@
 hostname = api.revenuecat.com
 
 */
-const guding = {};
-const guding6 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+const Qsp88888 = {};
+const Qsp88888 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
   guding.headers = $request.headers;
-} else if (guding6 && guding6.subscriber) {
-  guding6.subscriber.subscriptions = guding6.subscriber.subscriptions || {};
-  guding6.subscriber.entitlement = guding6.subscriber.entitlement || {};
+} else if (Qsp88888 && Qsp88888.subscriber) {
+  Qsp88888.subscriber.subscriptions = Qsp88888.subscriber.subscriptions || {};
+  Qsp88888.subscriber.entitlement = Qsp88888.subscriber.entitlement || {};
   const app = 'gd';const list = {'gd':{name: 'premium', id: 'tr5_yearlysubsc_20dlrs_1'}};
   const data = {
-    "expires_date": "6666-06-06T06:06:06Z",
+    "expires_date": "9999-09-09T06:06:06Z",
     "original_purchase_date": "2023-02-23T02:33:33Z",
     "purchase_date": "2023-02-23T02:33:33Z",
     "ownership_type" : "PURCHASED",
     "store" : "app_store"};
 for (const i in list) { if (new RegExp(`^${i}`, `i`).test(app)) {
-guding6.subscriber.subscriptions[list[i].id] = data;
-guding6.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
-guding6.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
+Qsp88888.subscriber.subscriptions[list[i].id] = data;
+Qsp88888.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
+Qsp88888.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
                 break;
           }
     }
-    guding.body = JSON.stringify(guding6);
+    Qsp88888.body = JSON.stringify(Qsp88888);
 }
-$done(guding);
+$done(Qsp88888);
